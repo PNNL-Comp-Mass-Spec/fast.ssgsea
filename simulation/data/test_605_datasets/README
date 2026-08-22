@@ -1,0 +1,5 @@
+# Mouse and human gene set databases
+
+The c5.go.v2026.1.Hs.symbols.gmt and m5.go.v2026.1.Mm.symbols.gmt files were downloaded from v2026.1.Hs and v2026.1.Mm of the Molecular Signatures Database (MSigDB, https://data.broadinstitute.org/gsea-msigdb/msigdb/release/). The files were compressed with R.utils::gzip() to save disk space, though they are not tracked by git.
+
+Then, the GMT files were read with hpgsea::read_gmt(), and the results were individually saved to .rds files with compress = "xz".
